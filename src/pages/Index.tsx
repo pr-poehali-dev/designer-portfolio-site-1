@@ -22,13 +22,6 @@ export default function Index() {
 
   const portfolioCategories = [
     { 
-      id: 'logos',
-      title: 'Логотипы', 
-      icon: 'Hexagon',
-      count: 12,
-      gradient: 'from-purple-500 to-pink-500'
-    },
-    { 
       id: 'avatars',
       title: 'Аватарки', 
       icon: 'User',
@@ -43,25 +36,25 @@ export default function Index() {
       gradient: 'from-orange-500 to-red-500'
     },
     { 
+      id: 'logos',
+      title: 'Логотипы', 
+      icon: 'Hexagon',
+      count: 12,
+      gradient: 'from-purple-500 to-pink-500'
+    },
+    { 
+      id: 'banners',
+      title: 'Баннеры - привью', 
+      icon: 'Image',
+      count: 20,
+      gradient: 'from-indigo-500 to-blue-500'
+    },
+    { 
       id: 'icons',
-      title: 'Иконки', 
-      icon: 'Sparkles',
+      title: 'Иконки для игр', 
+      icon: 'Gamepad2',
       count: 24,
       gradient: 'from-green-500 to-emerald-500'
-    },
-    { 
-      id: 'mockups',
-      title: 'Макеты', 
-      icon: 'Smartphone',
-      count: 10,
-      gradient: 'from-violet-500 to-purple-500'
-    },
-    { 
-      id: 'buttons',
-      title: 'Кнопки для игр', 
-      icon: 'Gamepad2',
-      count: 18,
-      gradient: 'from-pink-500 to-rose-500'
     },
     { 
       id: 'cards',
@@ -69,13 +62,6 @@ export default function Index() {
       icon: 'ShoppingBag',
       count: 14,
       gradient: 'from-amber-500 to-orange-500'
-    },
-    { 
-      id: 'banners',
-      title: 'Баннеры', 
-      icon: 'Image',
-      count: 20,
-      gradient: 'from-indigo-500 to-blue-500'
     }
   ];
 
@@ -99,7 +85,7 @@ export default function Index() {
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50 border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            Designer
+            Kwites Shop
           </h1>
           
           <div className="hidden md:flex items-center gap-8">
@@ -136,17 +122,17 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <div className="inline-block mb-6">
               <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Креативный дизайнер
+                Kwites Shop
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Создаю дизайн, который{' '}
+              Твой идеальный дизайн{' '}
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-float inline-block">
-                вдохновляет
+                начинается здесь
               </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Профессиональный дизайн для вашего бренда: от логотипов до полного оформления проектов
+              Создаём уникальные дизайны для игр и проектов: от аватарок до полного брендинга
             </p>
             <div className="flex gap-4 justify-center">
               <Button 
@@ -281,57 +267,53 @@ export default function Index() {
       <section id="contact" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-2xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">Давайте работать вместе</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Готов обсудить ваш проект и воплотить ваши идеи в жизнь
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">Связаться со мной</h2>
+            <p className="text-xl text-muted-foreground mb-12">
+              Выберите удобный способ связи
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <CardContent className="flex flex-col items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon name="Mail" size={24} className="text-primary" />
-                  </div>
-                  <div className="text-sm font-medium">Email</div>
-                  <div className="text-muted-foreground text-sm">designer@example.com</div>
-                </CardContent>
-              </Card>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <a 
+                href="https://funpay.com/users/8831302/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <Card className="p-8 hover:border-primary hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                  <CardContent className="flex flex-col items-center gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Icon name="ShoppingCart" size={32} className="text-white" />
+                    </div>
+                    <div className="text-2xl font-bold">FunPay</div>
+                    <div className="text-muted-foreground">Заказать работу</div>
+                  </CardContent>
+                </Card>
+              </a>
 
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <CardContent className="flex flex-col items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                    <Icon name="Phone" size={24} className="text-secondary" />
-                  </div>
-                  <div className="text-sm font-medium">Телефон</div>
-                  <div className="text-muted-foreground text-sm">+7 (999) 123-45-67</div>
-                </CardContent>
-              </Card>
-
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <CardContent className="flex flex-col items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                    <Icon name="MessageCircle" size={24} className="text-accent" />
-                  </div>
-                  <div className="text-sm font-medium">Telegram</div>
-                  <div className="text-muted-foreground text-sm">@designer</div>
-                </CardContent>
-              </Card>
+              <a 
+                href="https://t.me/TypaSweq" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <Card className="p-8 hover:border-secondary hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                  <CardContent className="flex flex-col items-center gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Icon name="MessageCircle" size={32} className="text-white" />
+                    </div>
+                    <div className="text-2xl font-bold">Telegram</div>
+                    <div className="text-muted-foreground">@TypaSweq</div>
+                  </CardContent>
+                </Card>
+              </a>
             </div>
-
-            <Button 
-              size="lg"
-              className="rounded-full px-8 bg-gradient-to-r from-primary via-secondary to-accent hover:opacity-90"
-            >
-              Написать мне
-              <Icon name="Send" size={20} className="ml-2" />
-            </Button>
           </div>
         </div>
       </section>
 
       <footer className="py-8 px-4 border-t border-border">
         <div className="container mx-auto text-center text-muted-foreground">
-          <p>© 2024 Designer Portfolio. Все права защищены.</p>
+          <p>© 2024 Kwites Shop. Все права защищены.</p>
         </div>
       </footer>
     </div>
